@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portafolio de Evidencias</title>
+    <style>
+.marco {
+    border: 5px solid black;
+    border-radius: 0px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            position: relative;
+            text-align: center;
+        }
+        .logo-izquierdo {
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            width: 150px;
+            height: auto;
+        }
+        .logo-derecho {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            width: 100px;
+            height: auto;
+        }
+        .titulo-principal {
+            font-size: 32px;
+            font-weight: bold;
+            margin: 10px 0 5px 0;
+        }
+        .subtitulo {
+            font-size: 20px;
+            font-style: italic;
+        }
+        nav {
+            background-color: #003366;
+            padding: 10px;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            display: inline-block;
+            color: white;
+            margin: 5px 10px;
+            padding: 8px 12px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            background-color: #003366;
+        }
+        nav a:hover {
+            background-color: #0055aa;
+        }
+        .section {
+            display: none;
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            margin-bottom: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .active {
+            display: block;
+        }
+        h2 {
+            color: #004080;
+        }
+        .documento {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .documento iframe {
+            flex: 1 1 500px;
+            height: 600px;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+.titulo-materia {
+    font-size: 1.8em; /* Puedes usar 2.2em o 2.5em si quieres más grande */
+    font-weight: bold;
+    color: #004080; /* para que mantenga el mismo color azul */
+    margin-bottom: 0.5em;
+}
+
+    </style>
+    <script>
+        function mostrarSeccion(id) {
+            const secciones = document.querySelectorAll('.section');
+            secciones.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+        window.onload = () => mostrarSeccion('portada');
+    </script>
+</head>
+<body>
+
+<header>
+    <img src="educacion.png" alt="Logo Secretaría de Educación" class="logo-izquierdo">
+    <img src="logolie1.png" alt="Logo LIE" class="logo-derecho">
+    <div class="titulo-principal">PORTAFOLIO ELECTRÓNICO</div>
+    <div class="subtitulo">Proyecto Integrador</div>
+</header>
+
+<nav>
+    <a href="#" onclick="mostrarSeccion('portada')">Portada</a>
+    <a href="#" onclick="mostrarSeccion('intervencion')">Intervención Educativa</a>
+    <a href="#" onclick="mostrarSeccion('desarrollo')">Desarrollo Regional y Microhistoria</a>
+    <a href="#" onclick="mostrarSeccion('investigacion')">Elementos Básicos de Investigación Cualitativa</a>
+    <a href="#" onclick="mostrarSeccion('politicas')">Políticas Públicas y Sistemas Educativos Contemporáneos</a>
+    <a href="#" onclick="mostrarSeccion('reflexion')">Reflexión Personal</a>
+</nav>
+
+<!-- NUEVO ESTILO Y PORTADA PROFESIONAL CON LOGOS -->
+<style>
+
+/* PORTADA ESTILO NUEVO */
+        .portada-section {
+            background-image: url('fondo.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 60px 20px;
+        }
+
+.portada-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    max-width: 750px;
+    margin: auto;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    border-left: 10px solid #004080;
+    font-family: Georgia, serif;
+    text-align: center;
+    position: relative;
+}
+
+.portada-card h2 {
+    font-size: 30px;
+    color: #004080;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.portada-card p {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.portada-card strong {
+    color: #222;
+}
+
+.frase-institucional {
+    margin-top: 30px;
+    font-size: 20px;
+    font-style: italic;
+    color: #004080;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* LOGO IZQUIERDO EN LA PORTADA */
+.logo-izquierdo-portada {
+    position: absolute;
+    top: -10px; /* Mueve más arriba cambiando este valor */
+    left: 10px;
+    width: 130px;
+    height: auto;
+}
+
+/* LOGO DERECHO EN LA PORTADA */
+.logo-derecho-portada {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 130px;
+    height: auto;
+}
+
+
+.logo-izquierdo-portada {
+    left: 20px;
+}
+
+.logo-derecho-portada {
+    right: 10px;
+}
+.titulo-materia {
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #003366;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif;
+    margin: 0 auto 30px;
+    padding: 15px 20px;
+    background: linear-gradient(135deg, #e0ecff, #f5faff);
+    border-left: 8px solid #004080;
+    border-radius: 6px;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.15);
+    animation: aparecer 1s ease-out;
+    max-width: 800px;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.titulo-materia {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.titulo-materia:hover {
+    transform: scale(1.03);
+    box-shadow: 0 9px 21px rgba(0, 64, 128, 0.4);
+}
+</style>
+
+<div id="portada" class="section portada-section">
+    <div class="portada-card">
+        <img src="educacion.png" alt="Logo Secretaría de Educación" class="logo-izquierdo-portada">
+        <img src="upn.png" alt="Logo UPN" class="logo-derecho-portada">
+
+        <h2>Proyecto Integrador</h2>
+        <p><strong>Nombre del estudiante:</strong> Juan Antonio Hernández Flores</p>
+        <p><strong>Universidad:</strong> Universidad Pedagógica Nacional Unidad 191 Monterrey</p>
+        <p><strong>Carrera:</strong> Licenciatura en Intervención Educativa</p>
+        <p><strong>Semestre:</strong> Segundo semestre</p>
+        <p><strong>Fecha:</strong> Monterrey, Nuevo León a 17 de junio de 2025</p>
+        <div class="frase-institucional">Educar para transformar</div>
+    </div>
+</div>
+
+
+<div id="intervencion" class="section">
+    <h2 class="titulo-materia"> Intervención Educativa</h2>
+    <p style="text-align: center;"><strong>Mtra.</strong> Estefanía Alanís Flores</p>
+
+    <h3>🌟 Proyecto de Intervención</h3>
+    <p><strong>Modelo elegido:</strong> Enfoque social en la problemática de la drogodependencia</p>
+    <p><strong>Nombre del proyecto:</strong> “Renacer: acompañamiento para jóvenes y familias ante las adicciones”</p>
+
+    <img src="drogas.jpg" alt="Imagen alusiva a la intervención educativa" style="width:100%;outline: 5px solid black; max-width:600px; display:block; margin: 20px auto;">
+
+    <h4>📝 Introducción</h4>
+    <p>Este proyecto nace de lo que he visto en mi colonia, ubicada en la zona norte de Monterrey. En la colonia donde vivo, es común ver a jóvenes en las esquinas fumando pasando mucho tiempo en la calle, y algunos ya están involucrados en el consumo de drogas. Muchos de ellos han dejado sus estudios, tienen problemas familiares o simplemente no tienen a nadie que los escuche esto me preocupa porque muchas veces estos jóvenes no tienen espacios seguros donde puedan expresarse, ni personas que los escuchen sin juzgar. Por eso elegí el modelo de “Enfoque social en la problemática de la drogodependencia” , ya que este permite acercarse más a la persona, porque no se trata solo de regañar o castigar, sino de entender qué hay detrás del consumo y ofrecer ayuda real, cercana y más humana mejorando su calidad de vida.</p>
+    <p>Elegí este modelo ya que permite trabajar tanto con los jóvenes como con sus familias, para dar orientación, espacios donde reflexionen , escucharlos y darles acompañamiento. Lo que quiero es que sientan que sí hay salida y que no están solos.</p>
+
+    <h4>🎯 Descripción del Proyecto</h4>
+    <p><strong>Mi propósito:</strong> Proponer un plan de intervención para prevenir y atender el consumo de drogas en adolescentes, a través de pláticas, talleres, actividades artísticas y acompañamiento familiar, en mi comunidad.</p>
+    <p><strong>¿Dónde se aplicará?:</strong> En el Centro Comunitario Valle de la Esperanza, y algunas actividades al aire libre en la cancha de futból.</p>
+    <p><strong>¿Cuándo?:</strong> Durante 5 semanas, con sesiones los viernes por la tarde y algunos sábados por la mañana.</p>
+    <p><strong>¿A quién va dirigido?:</strong> A jóvenes de 12 a 18 años que estén en riesgo o ya hayan empezado a consumir sustancias.</p>
+    <p><strong>¿Quién lo llevará a cabo?:</strong> Yo (como futuro interventor), con el apoyo de una psicóloga, un trabajador social, y un grupo de voluntarios de la colonia.</p>
+
+    <h4>📋 Actividades</h4>
+    <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+        <thead>
+            <tr>
+                 <th style="border: 2px solid black; padding: 8px; background-color: #c6e5b1;">Actividad</th>
+            <th style="border: 2px solid black; padding: 8px; background-color: #c6e5b1;">¿Qué se hará?</th>
+            <th style="border: 2px solid black; padding: 8px; background-color: #c6e5b1;">Lugar</th>
+            <th style="border: 2px solid black; padding: 8px; background-color: #c6e5b1;">Fecha</th>
+            <th style="border: 2px solid black; padding: 8px; background-color: #c6e5b1;">¿Quién lo hace?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 2px solid black; padding: 8px;">1</td>
+                <td style="border: 2px solid black; padding: 8px;">Plática: “Lo que nadie te dice sobre las drogas” – Mitos y realidades</td>
+                <td style="border: 2px solid black; padding: 8px;">Centro Comunitario Valle de la Esperanza</td>
+                <td style="border: 2px solid black; padding: 8px;">Viernes, Semana 1</td>
+                <td style="border: 2px solid black; padding: 8px;">Psicóloga y yo</td>
+            </tr>
+            <tr>
+                <td style="border: 2px solid black; padding: 8px;">2</td>
+                <td style="border: 2px solid black; padding: 8px;">Taller de expresión: “¿Qué siento, qué pienso, qué decido?” con actividades artísticas</td>
+                <td style="border: 2px solid black; padding: 8px;">Centro Comunitario Valle de la Esperanza</td>
+                <td style="border: 2px solid black; padding: 8px;">Sábado, Semana 2</td>
+                <td style="border: 2px solid black; padding: 8px;">Psicóloga y voluntarios</td>
+            </tr>
+            <tr>
+                <td style="border: 2px solid black; padding: 8px;">3</td>
+                <td style="border: 2px solid black; padding: 8px;">Encuentro con padres: “Cómo apoyar sin juzgar” – guía para papás y mamás</td>
+                <td style="border: 2px solid black; padding: 8px;">Centro Comunitario Valle de la Esperanza</td>
+                <td style="border: 2px solid black; padding: 8px;">Viernes, Semana 3</td>
+                <td style="border: 2px solid black; padding: 8px;">Trabajador social</td>
+            </tr>
+            <tr>
+                <td style="border: 2px solid black; padding: 8px;">4</td>
+                <td style="border: 2px solid black; padding: 8px;">Cine-debate con los jóvenes sobre una película que trate adicciones y consecuencias</td>
+                <td style="border: 2px solid black; padding: 8px;">Centro Comunitario Valle de la Esperanza</td>
+                <td style="border: 2px solid black; padding: 8px;">Viernes, Semana 4</td>
+                <td style="border: 2px solid black; padding: 8px;">Psicóloga y yo</td>
+            </tr>
+            <tr>
+                <td style="border: 2px solid black; padding: 8px;">5</td>
+                <td style="border: 2px solid black; padding: 8px;">Jornada de cierre: juegos, reflexión, cartas anónimas, comida y entrega de reconocimientos</td>
+                <td style="border: 2px solid black; padding: 8px;">Cancha de la colonia</td>
+                <td style="border: 2px solid black; padding: 8px;">Sábado, Semana 5</td>
+                <td style="border: 2px solid black; padding: 8px;">Todo el equipo</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>✅ Beneficios esperados</h4>
+<p>Con este proyecto busco que:</p>
+    <ul>
+        <li>Los jóvenes conozcan los riesgos reales de las drogas y aprendan a decir no.</li>
+        <li>Se sientan escuchados y acompañados, sin ser juzgados.</li>
+        <li>Las familias mejoren su comunicación y apoyo emocional.</li>
+        <li>Se fomente un ambiente más sano en la colonia.</li>
+        <li>Se reduzcan los casos de consumo entre adolescentes en mi colonia.</li>
+    </ul>
+
+    <div style="; padding: 20px; margin: 30px 0; text-align: center;">
+        <p><em>Cartel promocional.</em></p>
+        <div style="text-align: center; margin: 30px 0;">
+     <div style="text-align: center; margin: 30px 0;">
+    <img src="cartel.jpg" alt="Cartel del proyecto Renacer" style="width: 60%; border: 2px solid #999; padding: 10px;">
+</div>
+
+</div>
+
+
+    </div>
+
+    <h4>🧠 Conclusión</h4>
+    <p>Gracias a esta materia me di cuenta de que como interventor educativo puedo trabajar mucho más allá del aula en donde puedo transformar vidas, aunque sea poco a poco. No se necesita tener muchos recursos, sino atreverse y teniendo voluntad, empatía y un plan. Las adicciones no son un problema solo de quien consume, también es una señal de que alguien necesita ayuda siendo esto un reflejo de la sociedad que a veces abandona. Con este proyecto aprendí que escuchar, acompañar y proponer espacios que pueden cambiar vidas. Esta licenciatura me da herramientas para trabajar en la comunidad, en las calles, en centros comunitarios, con familias y con quienes más lo necesitan.</p>
+
+    <img src="jovenes.jpg" alt="Jóvenes participando" style="width:100%; max-width:600px;outline: 5px solid black; display:block; margin: 20px auto;">
+
+   
+    </div>
+</div>
+
+
+   <div id="desarrollo" class="section">
+   <h2 class="titulo-materia"> Desarrollo Regional y Microhistoria</h2>
+    <p style="text-align: center;"><strong>Mtro.</strong> Francisco Javier Paisano Cortinas</p>
+    <p>🎥 <strong>VLOG – Explorando el Museo de Historia Mexicana (Monterrey)</strong><br>
+    📅 Martes 3 de junio de 2025</p>
+
+    <p>¡Hola a todos! Quiero contarles cómo fue mi visita al Museo de Historia Mexicana en Monterrey. Ese día iba caminando por el centro, con el sol encima pero con muchas ganas de descubrir algo nuevo. Después de varios minutos, por fin llegué... y en cuanto vi el edificio, me sorprendí muchísimo. Es enorme, moderno y transmitía una energía muy bonita. 
+    La verdad, iba con muchas expectativas, ya que nunca había tenido oportunidad de ir por cuestión de tiempo; sin embargo, la verdad me emocionaba ir y quería conocer más sobre cómo vivían antes en México, cómo era la vida en los tiempos antiguos, ver cosas que tal vez nunca había visto en persona… y no me decepcionó, cumplió con todas mis expectativas.</p>
+
+    <h3>🚂 Sala del Siglo XX</h3>
+    <p>Aquí fue donde empezó el recorrido. Vi una locomotora de vapor gigante, fue muy impresionante de ver y me metí a verla por dentro y me imaginé cómo viajaban las personas hace 100 años. También había una estación de tren recreada, retratos de personajes como Madero y Porfirio Díaz, y pantallas con videos en el que podías interactuar. Sentí que por un momento estuve en otra época, fue una sensación muy bonita.<br>
+    <div style="display: flex; gap: 20px; justify-content: center; margin-top: 10px; flex-wrap: wrap;">  
+    📸 <img src="locomotora.jpg" alt="Imagen de la locomotora" width="300" class="marco">
+    📸 <img src="pdiaz.jpg" alt="Imagen de Porfirio Díaz" width="300" class="marco">
+</div>
+
+    <h3>🏺 México Antiguo</h3>
+    <p>Al pasar a esta sala, fue como entrar al corazón del pasado. Había vasijas, esculturas talladas, dioses antiguos y objetos rituales. Una de las que más me llamó la atención fue la serpiente de fuego, llamada Xiuhcóatl, que estaba tallada en piedra. Lo que más me impactó es que no era solo una pieza de arte, también tuvo su función, el cuál fue usada como desagüe y es algo impresionante de ver y de pensar el nivel de ingenio que se tuvo y a su vez en el uso que este se le podía dar. Me impresionó cómo todo tenía un significado, hasta el más mínimo detalle.<br>
+   <div style="display: flex; gap: 20px; justify-content: center; margin-top: 10px; flex-wrap: wrap;">  
+    📸 <img src="serpiente.jpg" alt="Serpiente Xiuhcóatl" width="300" class="marco">
+    📸 <img src="figura.jpg" alt="Figuras prehispanicas" width="300" class="marco">
+</div>
+
+    <h3>🧵 Arte y pensamiento textil</h3>
+    <p>Ahora llegamos a esta sala fue muy especial. Vi huipiles, rebozos y bordados llenos de colores muy bonitos y con diseños que los hacen únicos. Me gustó mucho cómo cada prenda tenía su propia historia, su origen, y representaba algo importante. Había una frase que me gustó mucho. No decía quién la escribió, pero aquí la comparto:
+
+<p>“El arte textil es un legado vivo, que continúa evolucionando sin perder su esencia.”<br></p>
+    <div style="display: flex; gap: 20px; justify-content: center; margin-top: 10px; flex-wrap: wrap;">  
+    📸 <img src="textil.jpg" alt="Textil Indígena" width="300" class="marco">
+    📸 <img src="bordado.jpg" alt="Bordados" width="300" class="marco">
+</div>
+
+    <h3>🌿 Madre Tierra</h3>
+    <p>Cuando entré a esta sala, sentí que me metí a un pedacito de cada rincón de México. Ya que había representaciones del desierto, la selva, el bosque… Todo en un solo lugar. Vi plantas enormes las cuales desconozco si eran reales o artificiales, también había sonidos de la naturaleza y un mapa muy grande que mostraba toda la geografía del país. Me hizo pensar en la riqueza natural que tenemos como país y cómo forma parte de nuestra historia.<br>
+    <div style="display: flex; gap: 20px; justify-content: center; margin-top: 10px; flex-wrap: wrap;">  
+    📸 <img src="arboles.jpg" alt="Arboles" width="300" class="marco">
+    📸 <img src="mapa.jpg" alt="Mapas" width="300" class="marco">
+</div>
+
+    <h3>🕊️ Los Marfiles</h3>
+    <p>Ya casi al final del recorrido, me encontré con unas esculturas talladas en marfil que tenían unos detalles muy impresionantes. Representaban figuras religiosas como vírgenes, santos y ángeles, y venían de lugares como Filipinas, India y China. Fue impresionante ver cómo el arte puede viajar y atravesar fronteras, y conectar infinidad de culturas tan diferentes.<br><div style="display: flex; gap: 20px; justify-content: center; margin-top: 10px; flex-wrap: wrap;">  
+    📸 <img src="marfil1.jpg" alt="Marfil 1" width="300" class="marco">
+    📸 <img src="marfil2.jpg" alt="Marfil 2" width="300" class="marco">
+</div>
+
+    <h3>📘 ¿Qué aprendí?</h3>
+    <p>Aprendí muchísimo sobre cómo ha cambiado la vida en México a lo largo del tiempo. Ver la locomotora, los objetos prehispánicos, las vestimentas tradicionales y hasta los ecosistemas del país me hizo entender que nuestra historia no solo está en los libros, también está en cada objeto, en cada prenda y en cada rincón natural que tenemos. Me sorprendió darme cuenta de cuánto ingenio, arte y significado hay en cosas que a veces no tomamos en cuenta. También aprendí que la historia no es solo algo del pasado, está viva y siempre estará arraigada al presente en nuestra cultura, hasta en nuestra forma de vestir, pensar y vivir.</p>
+
+    <h3>⚠️ Retos</h3>
+    <p>A veces era difícil leer toda la información ya que era mucha o las letras eran muy pequeñas. También me quedé con ganas de tocar algunas cosas pero sé que no se puede. Otro reto fue tratar de recordar todos los nombres y detalles ya que eran muchísimos</p>
+
+    <h3>💬 Reflexión final</h3>
+    <p>Esta visita al museo fue una experiencia muy bonita y significativa para mí. Me hizo sentir mucho orgullo de ser mexicano. Aprendí cosas nuevas, me emocioné y, sobre todo, me sentí más cerca del pasado. Caminar por cada sala fue como viajar al pasado y darme cuenta de todo lo valioso que tuvimos y tenemos aún como país: por ejemplo, nuestras tradiciones, nuestra gente, nuestra cultura y nuestra forma de ver el mundo. 
+    Lo que más me gustó es que no fue una visita aburrida, fue una experiencia que me puso a pensar y sentir. Ya que vi físicamente objetos que tenían sus propias historias, desde los textiles hechos a mano hasta una locomotora enorme o las figuras antiguas. Cada cosa tenía un propósito, un mensaje, y eso me hizo ver que nuestra historia está viva y que sigue presente en todo lo que somos hoy. Sinceramente, si algún día vuelvo a tener la oportunidad de visitar el Museo de Historia Mexicana, no lo pensaré dos veces e iré. Es un lugar que no solo te enseña, también te toca el corazón y, la verdad, vale muchísimo la pena.
+
+
+
+Sinceramente, si algún día vuelvo a tener la oportunidad de visitar el Museo de Historia Mexicana, no lo pensaré dos veces e iré. Es un lugar que no solo te enseña, también te toca el corazón y la verdad vale muchísimo la pena.</p>
+ <div style="display: flex; gap: 20px; justify-content: center; margin-top: 10px; flex-wrap: wrap;">
+    📸 <img src="foto.jpg" alt="Foto Personal" width="300" class="marco">
+    📸 <img src="grupal.jpg" alt="Foto Grupal" width="300" class="marco">
+</div>
+</div>
+
+<div id="investigacion" class="section">
+  <h2 class="titulo-materia">Elementos Básicos de Investigación Cualitativa</h2>
+  <p style="text-align: center;"><strong>Mtro.</strong> Mario Alberto Botello Velásquez</p>
+
+  <div class="documento" style="display: flex; flex-wrap: wrap; gap: 20px;">
+
+    <!-- Columna izquierda con dos recuadros apilados -->
+    <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; gap: 20px; max-width: 500px;">
+      
+      <div>
+        <h3>📌 Áreas de oportunidad, retos y reflexión</h3>
+        <div style="background-color: #f0f0f0; padding: 15px; border: 1px solid #ccc; border-radius: 8px; min-height: 150px;">
+          <!-- Aquí pones el contenido estático que quieras mostrar -->
+          Un área de oportunidad que identifiqué fue entender cómo es la dinámica y cómo evalúan los maestros en este nivel. Me gustaría aprender más sobre ese aspecto, porque creo que es importante. También me di cuenta de que hay situaciones delicadas, como el comportamiento de algunos alumnos que no conocen bien los límites y pueden generar momentos incómodos, como cuando me pedían mis redes sociales. Reflexioné que poner límites y mantener una actitud más "profesional" es algo muy importante en esta profesión.
+          En general, este acercamiento me ayudó a fortalecer mis metas y objetivos, y a confirmar que quiero dedicarme a ser maestro y que, aunque hay retos, también hay muchas cosas buenas. Me siento muy motivado a seguir aprendiendo, observando con más atención y preparándome, adquiriendo nuevas habilidades y conocimientos.
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <!-- PDF embebido -->
+    <iframe 
+      src="MIEXPERIENCIA1°JORNADA.pdf" 
+      width="500" 
+      height="600" 
+      style="border:1px solid #ccc;">
+    </iframe>
+
+  </div>
+
+  <!-- Aquí dejé fuera el otro recuadro "Qué aprendí" para que no interfiera -->
+  <div style="margin-top: 20px;">
+    <h3>💭 ¿Qué aprendí?</h3>
+    <div style="background-color: #f0f0f0; padding: 15px; border: 1px solid #ccc; border-radius: 8px;">
+      Realizar esta primera jornada de observación fue una experiencia muy enriquecedora para mí. Me permitió acercarme por primera vez al contexto real de una secundaria, algo que solo me había imaginado o escuchado de otros. Aprendí que muchas veces lo que se dice de una institución no refleja del todo la realidad. Yo mismo iba con algunos prejuicios o ideas negativas que había escuchado sobre la secundaria, pero al estar ahí, me di cuenta de que el ambiente es mucho más tranquilo, organizado y con maestros con vocación que aman enseñar.
+
+      Uno de los aprendizajes más importantes fue adquirir la habilidad de observar con más atención. Estar pendiente de lo que pasaba en el salón y en los pasillos me ayudó a entender mejor cómo funciona la escuela, a cómo se comunican los maestros con los alumnos, cómo mantienen el control del grupo y cómo se adaptan a los retos del día a día. También me di cuenta de lo importante que es tener paciencia, empatía y respeto, tanto para enseñar como para convivir con adolescentes que están en una etapa de crecimiento.
+    </div>
+  </div>
+
+</div>
+
+
+<div id="politicas" class="section">
+     <h2 class="titulo-materia">Políticas Públicas y Sistemas Educativos Contemporáneos</h2>
+     <p style="text-align: center;"><strong>Dra.</strong> Alicia Margarita Martínez Rincón</p>
+
+
+    <h3>LOS ORGANISMOS INTERNACIONALES Y EL SISTEMA EDUCATIVO MEXICANO</h3>
+
+    <h4>1. La intervención de la OCDE en el sistema educativo mexicano</h4>
+    <p><strong>a) Políticas de la OCDE en materia educativa</strong><br>
+    La OCDE ha impulsado desde la década de 2000 diversas políticas educativas basadas en tres ejes: un currículo por competencias, profesionalización docente y transparencia en evaluación.</p>
+    <p>En informes clave, como <em>Improving Schools: Strategies for Action in Mexico</em> (2010), la OCDE recomendó mejorar liderazgo escolar, gestión docente y participación social, alineado con sistemas de alta calidad. Además, en 2016 se acordó un sistema de evaluación docente vinculando capacitación, ingreso y estabilidad laboral conforme a directrices OCDE.</p>
+
+    <p><strong>b) Desarrollo de estas políticas en México</strong><br>
+    En 2009 se creó el Sistema Nacional de Educación Media Superior para estructurar y hacer más atractivo el bachillerato.</p>
+    <p>En 2012, la reforma educativa introdujo un currículo competencial y la obligatoriedad de la educación media superior.</p>
+    <p>En 2013 se promulgó la Ley del Servicio Profesional Docente y del Instituto de Evaluación Educativa, incorporando exámenes objetivos en carrera docente.</p>
+    <p>Entre 2008–2016, se implementaron evaluaciones y capacitación ancladas al modelo OCDE, aunque con críticas por enfocarse menos en formación continua que en rendición de cuentas.</p>
+
+    <h4>2. Estructura y modelo educativo de México</h4>
+    <p><strong>a) Comparación entre el modelo previo y la Nueva Escuela Mexicana (NEM)</strong></p>
+    
+    <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
+    <tr>
+        <th style="border: 1px solid black; background-color: #cbe0e9; padding: 10px;">ASPECTO</th>
+        <th style="border: 1px solid black; background-color: #cbe0e9; padding: 10px;">MODELO ANTERIOR (pre-2018)</th>
+        <th style="border: 1px solid black; background-color: #cbe0e9; padding: 10px;">NEM (post-2018)</th>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black; padding: 10px;">Niveles educativos</td>
+        <td style="border: 1px solid black; padding: 10px;">3 de preescolar (4‑6), 6 de primaria, 3 de secundaria; medio superior opcional inicialmente, obligatorio desde 2012.</td>
+        <td style="border: 1px solid black; padding: 10px;">Se reorganiza por “fases”: Educación Inicial (0‑3), Preescolar (3‑6), Primaria (6‑12), Secundaria (12‑15).</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black; padding: 10px;">Estructura curricular</td>
+        <td style="border: 1px solid black; padding: 10px;">Asignaturas tradicionales por grado, basada en competencias desde 2012.</td>
+        <td style="border: 1px solid black; padding: 10px;">Currículo por campos formativos, eliminación de grados, sustento en fases de aprendizaje.</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black; padding: 10px;">Evaluación docente</td>
+        <td style="border: 1px solid black; padding: 10px;">Basada en exámenes, ingreso y promoción vía Servicio Profesional Docente (2013).</td>
+        <td style="border: 1px solid black; padding: 10px;">Se busca evaluar integralmente, aunque falta claridad en criterios según críticos.</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black; padding: 10px;">Contexto político</td>
+        <td style="border: 1px solid black; padding: 10px;">Modelo técnico-empírico, continuidad con reformas de Peña Nieto.</td>
+        <td style="border: 1px solid black; padding: 10px;">Orientado a una transformación social comunitaria: valores, identidad, humanismo.</td>
+    </tr>
+</table>
+
+
+    <h4>Conclusión estructural</h4>
+    <p>El modelo anterior, iniciado por Peña Nieto (2012‑2013), se enfocaba en competencias, evaluaciones y obligatoriedad hasta nivel medio superior. Con la llegada de la NEM en 2023, se reestructura en fases, se eliminan grados y se priorizan procesos sociales, culturales y comunitarios en el currículo.</p>
+
+    <h4>b) Análisis y opinión sobre la NEM</h4>
+    <p><strong>Aspectos positivos:</strong></p>
+    <ul>
+        <li>Busca que los alumnos no solo aprendan cosas de memoria, sino que también crezcan como personas, tomando en cuenta su entorno, emociones, cultura y vida diaria.</li>
+        <li>Le da más valor al trabajo en equipo entre la escuela, los maestros, las familias y la comunidad, reconociendo que todos educamos, no solo el salón de clases.</li>
+    </ul>
+    <p><strong>Aspectos negativos:</strong></p>
+    <ul>
+        <li>Los cambios se hicieron muy rápido y sin preguntar suficiente a los maestros o a las escuelas. Eso generó muchas dudas y resistencias.</li>
+        <li>Se juntaron o quitaron materias muy importantes como matemáticas y ciencias, y eso puede hacer que los estudiantes no aprendan bien lo básico.</li>
+        <li>En lugar de usar grados escolares (como 1°, 2°, etc.), ahora se habla de "fases", y eso ha causado confusión porque no está muy claro cómo funciona.</li>
+        <li>Hay preocupación de que se esté dando más importancia a ideas políticas o colectivas que al desarrollo personal y la libertad de cada alumno.
+
+</li>
+    </ul>
+    <p><strong>Mi postura:</strong><br>
+
+    <p>Me gusta mucho que este modelo trate de ver al estudiante como un ser humano más holístico, y no solo como alguien que tiene que pasar exámenes. También me parece muy importante que quiera hacer que la comunidad y que los maestros tengan un papel más importante.
+
+Pero también creo que hay cosas que no se hicieron bien. Por ejemplo, quitar materias que eran a mi parecer eran clave y el no preguntar ni preparar a los maestros bien para los cambios fue un error. Pienso que si se hubieran tomado más tiempo, escuchado más a quienes están cerca de los alumnos, y encontrado un equilibrio entre enseñar lo que se aprende en las escuelas y formar buenas personas, el cambio hubiera sido mucho mejor.
+</p>
+
+   <h4>Referencias Bibliográficas</h4>
+<ul>
+    <li>
+        Cuevas Cajiga, Y., & Moreno Olivos, T. (2016). OECD teaching assessment policies: Approaching the experience in Mexican basic education. 
+        <em>Education Policy Analysis Archives, 24</em>, 120. 
+        <a href="https://doi.org/10.14507/epaa.24.2283" style="color: #0000EE; text-decoration: underline;">https://doi.org/10.14507/epaa.24.2283</a>
+    </li>
+    <li>
+        Guichard, S. (2005). The education challenge in Mexico: Delivering good quality education to all (OECD Economics Department Working Paper No. 447). OECD Publishing. 
+        <a href="https://doi.org/10.1787/047122723082" style="color: #0000EE; text-decoration: underline;">https://doi.org/10.1787/047122723082</a>
+    </li>
+    <li>
+        OECD. (2010). <em>Improving Schools: Strategies for Action in Mexico</em>. OECD Publishing. 
+        <a href="https://doi.org/10.1787/9789264087040-en" style="color: #0000EE; text-decoration: underline;">https://doi.org/10.1787/9789264087040-en</a>
+    </li>
+    <li>
+        OECD. (2013). <em>Improving Education in Mexico: A State-level Perspective from Puebla</em>. OECD Publishing. 
+        <a href="https://doi.org/10.1787/9789264200197-en" style="color: #0000EE; text-decoration: underline;">https://doi.org/10.1787/9789264200197-en</a>
+    </li>
+    <li>
+        Victorino, M. (2025, enero 14). La Nueva Escuela Mexicana: Un análisis crítico. <em>MasClaro.mx</em>. 
+        <a href="#" style="color: #0000EE; text-decoration: underline;">https://masclaro.mx/nem-analisis</a>
+    </li>
+</ul>
+</div>
+   
+    </div>
+</div>
+
+<div id="reflexion" class="section">
+     <h2 class="titulo-materia">Reflexión Personal</h2>
+    <p>Este segundo semestre fue muy especial para mí, porque aprendí un muchas cosas nuevas que me hicieron entender mejor qué es lo que hace un interventor educativo. Cada materia fue diferente, pero todas se conectan entre sí. Siento que ahora tengo una idea más clara de cómo podemos ayudar a las personas desde la educación.</p>
+  <p>En la clase de <strong>Elementos Basicos de Investigación Cualitativa</strong>, aprendi a hacer entrevistas, a observar lo que pasa a nuestro alrededor y a entender lo que nos cuentan otras personas. Usamos guías de entrevistas, hicimos reportes y también vimos algo llamado método etnográfico, que básicamente es investigar desde lo que uno ve, escucha y vive en un lugar. Lo que más me gustó fue que aquí no hay una sola “verdad”, sino que cada persona puede ver las cosas desde su punto de vista desde su interpretacion, y eso también es válido. El maestro Mario nos explicaba todo con calma y nos dejaba expresarnos libremente.</p>
+<p>En la materia de <strong>Intervención educativa</strong>, vimos muchos temas: desde cómo diagnósticos psicopedagógicos, hasta modelos educativos, actividades fuera del aula, pedagogía social y cómo hacer una intervención en lo social o en lo educativo. Me di cuenta de que intervenir no es solo “ayudar por ayudar”, sino que hay que saber cómo hacerlo, conocer bien el problema y tener las herramientas para actuar. Esta clase me ayudó a ver que como interventores podemos trabajar en muchas áreas, no solo en escuelas. La maestra siempre nos animaba a pensar con mas creatividad y nos explicaba con ejemplos muy faciles de entender y a ver los problemas desde distintos ángulos.</p>
+
+  <p>En <strong>Políticas públicas y sistemas educativos contemporaneos</strong>, hablamos mucho de cómo las decisiones del gobierno afectan lo que pasa en las escuelas. Vimos reformas educativas, las leyes, programas y todo eso que muchas veces no se entiende, pero que sí influye mucho. Algo bonito de esta clase era que al principio de cada sesión escribíamos una frase motivadora. Eso me gustaba porque me hacía empezar la clase con buena energía y con ganas de seguir adelante. La maestra siempre nos explicaba todo de forma clara y se notaba que quería que entendiéramos bien cómo funciona el sistema educativo.</p>
+
+  <p>En la clase de <strong>Desarrollo regional y microhistoria</strong>, vimos que también es importante conocer la historia de nuestras comunidades. No todo está en los libros grandes de historia, también hay cosas importantes en lo local: lo que ha pasado en nuestra colonia, en nuestra ciudad. Aprendimos sobre historiadores y mucho mas, y cómo investigar desde lo pequeño. Me gustó mucho porque entendí que para poder ayudar a alguien, también hay que saber de dónde viene, cuál es su historia y qué ha vivido su comunidad todo esto como lo mencione anteriormente todo va arraigado en la educacion .</p>
+
+  <p>Además, llevé una materia optativa de <strong>Educación ambiental</strong>, donde hablamos sobre cómo cuidar el medio ambiente a traves de habitos y estrategias en nuestra comunidad y cómo desde la educación tambien podemos hacer la diferencia. Me ayudó a reflexionar sobre mis propios hábitos y en cómo puedo ayudar a que otras personas también cuiden más su entorno. Las actividades eran en linea lo cual siento que si era una desventaja ya que no es lo mismo aprender en presencial que de manera virtual , sin embargo, la maestra siempre nos ponia actividades muy dinamicas que me ayudaban a fomentar el pensamiento critico, lo cual era de mas facil comprension.</p>
+
+  <h3 style="color: #27ae60;">📝 Mi conclusión personal</h3>
+  <p>La verdad, este semestre me hizo sentir más seguro de la carrera que elegí. Aprendí cosas muy útiles y también conocí otras formas de ver la educación. Cada docente que tuve puso de su parte para que entendiéramos, nos tuvo paciencia y nos motivó a seguir aprendiendo. Me sentí muy bien acompañado en todo momento ya que cuando teniamos dudas, no dudaban en explicarnos y eso en lo personal lo valoro mucho.</p>
+
+  <p>Me llevo muchas ideas nuevas con mas conocimientos, más herramientas para mi formación, y sobre todo, muchas ganas de seguir. Ahora veo que intervenir no es tan fácil como pensaba, pero sí es muy importante. Saber escuchar, observar, entender el contexto y actuar de manera mas responsable son cosas que aprendí y que me van a servir mucho en el futuro.</p>
+
+  <p>Estoy muy agradecido por todo lo que viví y aprendi en este segundo semestre. A veces fue cansado, claro, pero también me dejó mucha motivación. Siento que estoy en el camino correcto y quiero seguir dando lo mejor de mí.</p>
+</section>  
+
+    </div>
+</div>
+
+<footer>
+    <p>Portafolio de Evidencias | Juan Antonio Hernández Flores | © 2° Semestre</p>
+</footer>
+
+</body>
+</html>
